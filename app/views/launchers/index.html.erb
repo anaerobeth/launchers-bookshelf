@@ -1,0 +1,27 @@
+<h1>Listing launchers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @launchers.each do |launcher| %>
+      <tr>
+        <td><%= launcher.user_name %></td>
+        <td><%= link_to 'Show', launcher %></td>
+        <td><%= link_to 'Edit', edit_launcher_path(launcher) %></td>
+        <td><%= link_to 'Destroy', launcher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Launcher', new_launcher_path %>

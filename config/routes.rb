@@ -1,4 +1,16 @@
 Bookshelf::Application.routes.draw do
+  resources :book_signups
+
+  resources :book_launchers
+
+  resources :launchers
+
+  resources :authors
+
+  resources :book_authors
+
+  resources :books
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

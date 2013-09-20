@@ -1,0 +1,2 @@
+module BookSignupsHelper
+end

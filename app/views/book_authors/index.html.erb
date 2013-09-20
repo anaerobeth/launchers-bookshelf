@@ -1,0 +1,29 @@
+<h1>Listing book_authors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Book</th>
+      <th>Author</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @book_authors.each do |book_author| %>
+      <tr>
+        <td><%= book_author.book_id %></td>
+        <td><%= book_author.author_id %></td>
+        <td><%= link_to 'Show', book_author %></td>
+        <td><%= link_to 'Edit', edit_book_author_path(book_author) %></td>
+        <td><%= link_to 'Destroy', book_author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Book author', new_book_author_path %>

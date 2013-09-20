@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @book_launcher.book_id %>
+</p>
+
+<p>
+  <strong>Launcher:</strong>
+  <%= @book_launcher.launcher_id %>
+</p>
+
+<%= link_to 'Edit', edit_book_launcher_path(@book_launcher) %> |
+<%= link_to 'Back', book_launchers_path %>

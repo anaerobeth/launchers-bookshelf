@@ -1,0 +1,29 @@
+<h1>Listing book_signups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Launcher</th>
+      <th>Book</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @book_signups.each do |book_signup| %>
+      <tr>
+        <td><%= book_signup.launcher_id %></td>
+        <td><%= book_signup.book_id %></td>
+        <td><%= link_to 'Show', book_signup %></td>
+        <td><%= link_to 'Edit', edit_book_signup_path(book_signup) %></td>
+        <td><%= link_to 'Destroy', book_signup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Book signup', new_book_signup_path %>

@@ -1,0 +1,2 @@
+module BookLaunchersHelper
+end
